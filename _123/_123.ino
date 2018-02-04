@@ -14,8 +14,10 @@ void loop() {
     press_time=millis();
     Serial.print(press_time);
     Serial.print(" ");
+  }
   else if(current==HIGH && previous==LOW){
     release_time=millis();
+    Serial.println(release_time);
     Serial.print("The time difference is ");
     Serial.println(release_time - press_time);
   }
